@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+#canvas{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    /* position: relative; */
+    position: absolute;
+    display: none;
+    transition: all 3s ease;
+    z-index: 2;
+    transform: scale(0);
+  
+  
+    
+  }
+  
+  
+  .Navbar-Section{
+    display: none;
+  }
+
+
+.herobutton {
+width:50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+background-color: transparent;
+color: white;
+border: 0.5px solid rgb(254, 182, 250);
+border-radius: 50%;
+z-index: 1;
+cursor: pointer;
+margin: 20px;
+/* opacity: 0; */
+transition: all 0.5s ease-in-out;
+}
+
+.transform-origin-buttons{
+  transform: translateY(0);
+ 
+}
+.transform-up-buttons{
+  transform: translateY(-2000px);
+  
+
+}
+.transform-down{
+  transform: translateY(2000px);
+  opacity: 0;
+  
+
+}
+
+
+.herobutton:hover{
+  transform: scale(1.1);
+  transition: 0.2s linear;
+}
+
+.herobutton i{
+font-size: 20px;
+}
+.herobutton img{
+width: 40px;
+filter: brightness(4);
+}
+.buttons{
+  display: flex;
+}
+.home{
+  position: absolute;
+  top: 16%;
+  left: 47%;
+   transition: all 2000ms ease;
+   z-index: 5;
+  transition:  transform  2s ease;
+}
+.home:hover .hm{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.abt{
+  position: absolute;
+  top: 31%;
+  left: 28%;
+  z-index: 999;
+  transition: all 2000ms ease;
+}
+.abt:hover .at{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.client{
+  position: absolute;
+  top: 61%;
+  left: 28%;
+  transition: all 2000ms ease;
+  z-index: 999;
+}
+.client:hover .cl{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.service{
+  position: absolute;
+  top: 78%;
+  left: 48%;
+  z-index: 999;
+  transition: all 2000ms ease;
+}
+.service:hover .sr{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.team{
+  position: absolute;
+  top: 58%;
+  left: 67%;
+  z-index: 999;
+  transition: all 2000ms ease;
+}
+.team:hover .tm{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.contact{
+  position: absolute;
+  top: 31%;
+  left: 67%;
+  transition: all 2000ms ease;
+  z-index: 999;
+}
+.contact:hover .ct{
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+  border: none;
+}
+.buttons p{
+  color: white;
+  font-family: 'poppins';
+  transition: 0.5s ease-in-out;
+}
+.buttons:hover p{
+  color: rgb(216, 174, 255);
+  transform: scale(1.05);
+}
+.buttons a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media  (max-width:800px) {
+  .herobutton {
+    width:40px;
+    height: 40px;
+    
+    }
+    
+  
+    
+    
+    
+    .herobutton i{
+    font-size: 15px;
+    }
+    .herobutton img{
+    width: 30px;
+    }
+   
+  .home{
+    position: absolute;
+    top: 22%;
+    left: 42%;
+     transition: all 2000ms ease;
+     z-index: 5;
+    transition:  transform  2s ease;
+  }
+  .home:hover .hm{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .abt{
+    position: absolute;
+    top: 31%;
+    left: 18%;
+    z-index: 999;
+    transition: all 2000ms ease;
+  }
+  .abt:hover .at{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .client{
+    position: absolute;
+    top: 61%;
+    left: 18%;
+    transition: all 2000ms ease;
+    z-index: 999;
+  }
+  .client:hover .cl{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .service{
+    position: absolute;
+    top: 68%;
+    left: 42%;
+    z-index: 999;
+    transition: all 2000ms ease;
+  }
+  .service:hover .sr{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .team{
+    position: absolute;
+    top: 58%;
+    left: 67%;
+    z-index: 999;
+    transition: all 2000ms ease;
+  }
+  .team:hover .tm{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .contact{
+    position: absolute;
+    top: 31%;
+    left: 67%;
+    transition: all 2000ms ease;
+    z-index: 1;
+  }
+  .contact:hover .ct{
+    color: white;
+    box-shadow: 0 5px 15px #afe0f5;
+    border: none;
+  }
+  .buttons p{
+    font-size: 10px;
+    color: white;
+    font-family: 'poppins';
+    transition: 0.5s ease-in-out;
+  }
+ 
+  
+}

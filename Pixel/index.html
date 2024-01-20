@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <link rel="stylesheet" href="css/firefly.css" />
+  <link rel="stylesheet" href="css/about.css" />
+
+  <link rel="stylesheet" href="css/Galaxy.css " />
+  <link rel="stylesheet" href="css/clients.css" />
+  <link rel="stylesheet" href="css/team.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/vision.css">
+  <link rel="stylesheet" href="css/audio.css">
+
+
+  <link rel="stylesheet" href="css/Services.css">
+
+</head>
+
+
+
+<style>
+  .lil-gui .title {
+    display: none;
+  }
+
+  .lil-gui.root>.children {
+    display: none;
+  }
+</style>
+
+<body>
+  <script>
+    function update(e) {
+      var x = e.clientX || e.touches[0].clientX
+      var y = e.clientY || e.touches[0].clientY
+
+      document.documentElement.style.setProperty('--cursorX', x + 'px')
+      document.documentElement.style.setProperty('--cursorY', y + 'px')
+    }
+
+    document.addEventListener('mousemove', update)
+    document.addEventListener('touchmove', update)
+  </script>
+  <!-- <div id="three-container"></div> -->
+  <div id="particles-js"></div>
+  <!-- <div class="particlehead"></div> -->
+
+
+  <div class="overlay"></div>
+  <video id="vid" muted autoplay plays-inline loop>
+    <source src="./images/lines_-_5224 (540p).mp4" type="video/mp4" />
+  </video>
+  <!-- <video id="vid" muted autoplay plays-inline loop>
+    <source src="./images/HVideo.mp4" type="video/mp4" />
+  </video> -->
+  <div class="veiw view-team">
+    <button class="veiw-all" onclick="teamGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+  </div>
+  <div class="veiw view-client">
+    <button class="veiw-all" onclick="clientGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+  <div class="veiw view-contact">
+    <button class="veiw-all" onclick="contactGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+  <div class="veiw view-about">
+    <button class="veiw-all" onclick="aboutGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+  <div class="veiw view-vision">
+    <button class="veiw-all" onclick="visionGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+  <div class="veiw view-service">
+    <button class="veiw-all" onclick="ServiceGo()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-left arr-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg>
+    </button>
+    <p class="veiw-content">VIEW ALL</p>
+  </div>
+
+
+  <!-- Quantity should be the same in Sass-->
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+
+  <!-- audio part -->
+  <audio id="volume" autoplay loop style="z-index: 999999">
+    <source src="wandering-6394.mp3" type="audio/mpeg" />
+  </audio>
+
+
+
+  <script>
+    let vol = document.getElementById("volume");
+    vol.volume = 0.4;
+  </script>
+
+  <div class="audio-button">
+    <button id="audio-toggle" onclick="toggleButton()">
+      AUDIO
+
+    </button>
+
+  </div>
+  </div>
+
+  <script>
+    function toggleButton() {
+      var audioButton = document.getElementById("volume");
+      if (audioButton.muted) {
+        audioButton.muted = false;
+      }
+      else {
+        audioButton.muted = true;
+      }
+    }
+  </script>
+
+
+
+  <div class="button-bar">
+
+    <div>
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <button class="herobutton hb" onclick="homeComeFromBar()">
+        <i class="bi bi-house-fill"></i>
+      </button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+    <div class="about-link" onclick="AboutComeFromBar()">
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <button class="herobutton ab">
+        <img src="./images/axs.png" alt="">
+      </button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+    <div onclick="clientComeFromBar()">
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <button class="herobutton cb">
+        <i class="bi bi-person-check"></i>
+      </button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+    <div >
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <a href="../gallery/gallery.html"><button class="herobutton sb">
+        <i class="bi bi-sliders"></i>
+      </button></a>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+    <div onclick="teamComeFromBar()">
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <button class="herobutton tb">
+        <i class="bi bi-people-fill"></i>
+      </button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+    <div onclick="contactComeFromBar()">
+      <!-- <div class="button1"> -->
+      <!-- <div class="button2"> -->
+
+      <button class="herobutton cob">
+        <i class="bi bi-telephone-fill"></i>
+      </button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+
+  <div class="Hero-section">
+    <div class="topbar">
+      <div class="logo-home">Pixel</div>
+    <button id="connect-button" style="z-index: 1000;">Connect Metamask</button>
+  </div>
+    <div class="content-home">
+      <div class="tagline">Empowering Artists in the Digital Canvas</div>
+      <span id="sub"> Guided by Your Success</span>
+      <!-- <div class="tagline2"></div> -->
+      <div class="detail">
+        This is Name , where innovation meets artistry in the boundless realm of digital expression. Our platform is not just a gallery; it's a dynamic ecosystem designed to empower artists and revolutionize the way we appreciate and value digital ar
+      </div>
+
+      <div class="button-home">
+        <div class="button-headline">Explore the Future</div>
+
+        <div class="button1" onclick="galaxyVisible()">
+          <!-- <div class="button2"> -->
+
+          <button class="homebutton">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </div>
+          </button>
+          <!-- </div> -->
+        </div>
+      </div>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+    </div>
+    <canvas id="canvas"></canvas>
+
+    <div class="buttons">
+      <div class="home transform-up-buttons" onclick="galaxyhide()">
+        <!-- <div class="button1"> -->
+        <!-- <div class="button2"> -->
+        <p class="text-home">HOME</p>
+        <button class="herobutton hm">
+          <i class="bi bi-house-fill"></i>
+        </button>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="abt transform-up-buttons" onclick="aboutCome()">
+        <!-- <div class="button1"> -->
+        <!-- <div class="button2"> -->
+        <p class="text-home">ABOUT</p>
+        <button class="herobutton at">
+          <img src="./images/axs.png" alt="" />
+        </button>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="client transform-up-buttons" onclick="clientCome()">
+        <!-- <div class="button1"> -->
+        <!-- <div class="button2"> -->
+
+        <button class="herobutton cl">
+          <i class="bi bi-person-check"></i>
+        </button>
+        <p class="text-home">CLIENTS</p>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <a href="../gallery/gallery.html"><div class="service transform-up-buttons" >
+        <button class="herobutton sr">
+          <i class="bi bi-sliders"></i>
+        </button>
+        <p class="text-home">NFT GALLERY</p>
+      </div></a>
+      <div class="team transform-up-buttons" onclick="teamCome()">
+        <!-- <div class="button1"> -->
+        <!-- <div class="button2"> -->
+
+        <button class="herobutton tm">
+          <i class="bi bi-people-fill"></i>
+        </button>
+        <p class="text-home">TEAM</p>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="contact transform-up-buttons" onclick="contactCome()">
+        <!-- <div class="button1"> -->
+        <!-- <div class="button2"> -->
+        <p class="text-home">CONTACT</p>
+        <button class="herobutton ct">
+          <i class="bi bi-telephone-fill"></i>
+        </button>
+
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <script src="Js/Particle.js"></script>
+  </div>
+  <div class="clients-page">
+    <div class="client-main">
+      <input type="radio" name="slider" id="c1" />
+      <input type="radio" name="slider" id="c2" />
+      <input type="radio" name="slider" id="c3" />
+
+      <div class="bundle">
+        <div class="singleCard card1">
+          <div class="photu">
+            <img src="./images/Clients/1984Img.png" alt="" />
+          </div>
+          <div class="text">
+            <img class="small" src="./images/Clients/1984redux.png" alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+              quas natus hic obcaecati explicabo, zperspiciatis placeat
+              provident consectetur dolorem tenetur?
+            </p>
+          </div>
+        </div>
+
+        <div class="singleCard card2">
+          <div class="photu">
+            <img src="./images/Clients/HapePrime.webp" alt="" />
+          </div>
+          <div class="text">
+            <img src="./images/Clients/hape-prime-logo-white.png" alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+              quas natus hic obcaecati explicabo, zperspiciatis placeat
+              provident consectetur dolorem tenetur?
+            </p>
+          </div>
+        </div>
+        <div class="singleCard card3">
+          <div class="photu">
+            <img src="./images/Clients/DieselNFT.gif" alt="" />
+          </div>
+          <div class="text">
+            <img class="small" src="./images/Clients/diesel-logo-white.png" alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+              quas natus hic obcaecati explicabo, zperspiciatis placeat
+              provident consectetur dolorem tenetur?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainLogos">
+        <label for="c1"><img id="ML1" src="./images/Clients/1984redux.png" for="c1" alt="" /></label>
+        <div class="vLine"></div>
+        <label for="c2"><img class="big" id="ML2" src="./images/Clients/hape-prime-logo-white.png" for="c2"
+            alt="" /></label>
+        <div class="vLine"></div>
+        <label for="c3"><img id="ML3" src="./images/Clients/diesel-logo-white.png" for="c3" alt="" /></label>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="others">
+        <img src="./images/Clients/jil-sander-logo-white.png" alt="" />
+        <img src="./images/Clients/maison-margiela-logo-white.png" alt="" />
+        <img src="./images/Clients/brave-kid-logo-white.png" alt="" />
+        <img src="./images/Clients/azuki-logo-white.png" alt="" />
+        <img class="sm" src="./images/Clients/nike-logo-white.png" alt="" />
+        <img class="sm" src="./images/Clients/memeland-logo-white.png" alt="" />
+        <img class="samsung" src="./images/Clients/samsung-logo-white.png" alt="" />
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <section class="team-section">
+    
+    <!-- <div class="info">
+      <div class="i i1">
+        <i class="fa-solid fa-xmark cross"></i>
+        <div class="text">
+          <h1>Mister Mo</h1>
+          <h2>CEO</h2>
+          <p>
+            A Web3 Consultant with a decade of management experience at prestigious companies like Mercedes and
+            Vodafone. As the founder of our web3 service agency.
+            <br>
+            Mo helps businesses embrace blockchain technology, integrating it into their e-commerce systems and
+            building a strong web3 community. With a proven track record supporting renowned brands like Diesel,
+            Maison Margiela, and others, Mo guides brands at every stage of their web3 journey.
+            <br>
+            Mo's strategic mindset and deep web3 knowledge make him a valuable asset, ensuring clients stay
+            ahead of the curve. By partnering with our agency, clients tap into Mo's expertise to establish a
+            strong web3 presence and achieve success.
+
+          </p>
+        </div>
+
+        <div class="img">
+          <img src="./images/Teams/mo.png" alt="">
+        </div>
+      </div>
+
+      <div class="i i2">
+        <i class="fa-solid fa-xmark cross"></i>
+        <div class="text">
+          <h1>Wilxlee</h1>
+          <h2>CSO</h2>
+          <p>
+            Wun2Free Entertainment 10+ Years with +$50M Generated.
+            <br>
+            720 Sweets & ETC 7 International Locations - Excited 2019.
+            <br>
+            AMTP 2 National Locations — Excited 2014.
+          </p>
+        </div>
+
+        <div class="img">
+          <img src="./images/Teams/wil.png" alt="">
+        </div>
+      </div>
+
+      <div class="i  i3">
+        <i class="fa-solid fa-xmark cross"></i>
+        <div class="text">
+          <h1>Luciano</h1>
+          <h2>Tech Advisor</h2>
+          <p>
+            Founder of Inventio Hub, a software house that empowers traditional companies to explore blockchain
+            technology, metaverse presence, and NFTs for growth and innovation.
+            <br><br>
+            Runs a team of skilled developers, specialized in Web3 development, smart contract creation, and
+            integration.
+
+          </p>
+        </div>
+
+        <div class="img">
+          <img src="./images/Teams/luciano.png" alt="">
+        </div>
+      </div>
+
+      <div class="i i4">
+        <i class="fa-solid fa-xmark cross"></i>
+        <div class="text">
+          <h1>Mamady Conde</h1>
+          <h2>Creative Designer</h2>
+          <p>
+            Versatile filmmaker, creative producer, entrepreneur, and marketing expert.
+            <br>
+            Collaborated with renowned brands like Nike, Honda, and LVMH.
+            <br>
+            Marketing efforts generated over $1 billion in revenue for web3 companies.
+          </p>
+        </div>
+
+        <div class="img">
+          <img src="./images/Teams/mamady.png" alt="">
+        </div>
+      </div>
+
+    </div> -->
+
+
+
+    <div class="main-team">
+      <h1>TEAM AXS</h1>
+
+      <div class="box">
+
+
+        <article class="card cd1">
+          <div class="card__inner">
+            <div class="card__body card__body--front">
+              <img width="200px" src="./images/Teams/mo.png" alt="">
+
+            </div>
+            <div class="card__body card__body--back">
+              <h2 class="card__title">CEO</h2>
+              <p>~ Mister Mo</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card cd2">
+          <div class="card__inner">
+            <div class="card__body card__body--front">
+              <img width="200px" src="./images/Teams/wil.png" alt="">
+
+            </div>
+            <div class="card__body card__body--back">
+              <h2 class="card__title">CSO</h2>
+              <p>~ Wilxlee</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card cd3">
+          <div class="card__inner">
+            <div class="card__body card__body--front">
+              <img width="200px" src="./images/Teams/luciano.png" alt="">
+
+            </div>
+            <div class="card__body card__body--back">
+              <h2 class="card__title">Tech Advisor</h2>
+              <p>~ Luciano</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card cd4">
+          <div class="card__inner">
+            <div class="card__body card__body--front">
+              <img width="200px" src="./images/Teams/mamady.png" alt="">
+
+            </div>
+            <div class="card__body card__body--back">
+              <h2 class="card__title">Creative Designer</h2>
+              <p>~ Mamady Conde</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- contact-section -->
+
+  <section class="Contact">
+    <div class="sc-title  ">
+      <h3>Contact<span> Us</span></h3>
+      <!-- <div class="line "></div> -->
+    </div>
+    <div class="main-div">
+
+      <div class="contact-part">
+        <div class="icon-part">
+          <div class="icon-div">
+            <i class="fa-solid fa-phone"></i>
+            <!-- <h3>Call Us </h3> -->
+            <p>************</p>
+
+          </div>
+          <div class="icon-div">
+            <i class="fa-solid fa-location-dot"></i>
+            <!-- <h3>Office</h3> -->
+            <p>Jaipur,Rajasthan</p>
+
+          </div>
+          <div class="icon-div">
+            <i class="fa-solid fa-envelope"></i>
+            <!-- <h3>Email</h3> -->
+            <p>Mohammed@axsweb3.com </p>
+
+          </div>
+          <!-- <div class="icon-div">
+                 <i class="fa-solid fa-earth-americas"></i>
+                 <h3>Website</h3>
+                 <p>xxxxxxxxxxx</p>
+                 
+             </div> -->
+        </div>
+
+        <div class="contact-form">
+
+
+          <!-- <label for="name"></label> -->
+          <input type="text" name="name" id="name" placeholder="Enter Full Name ">
+          <input type="email" name="email" id="email" placeholder="Enter Email">
+
+          <!-- <input type="text" name="number" id="number" placeholder="Enter Phone Number"> -->
+          <input type="text" name="subject" id="subject" placeholder="Enter Number">
+
+          <a href="#">
+            <div class="btn">
+              Send Message
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- about section  -->
+
+  <div class="about-us transition-fade">
+    <!-- <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div> -->
+
+    <!-- <img src="./rocket.png" class="rocket" alt="" /> -->
+
+    <div class="main-about">
+      <div class="text">
+        <h3 class="heading">PIXEL</h3>
+        <p class="content about-content">
+          Name is more than just a platform; it's a movement to redefine the relationship between artists, their creations, and the global audience. Join us on this exciting journey, where the world of digital art converges with the limitless possibilities of blockchain technology. Together, let's paint a new canvas for the future of artistic expression.
+        </p>
+        <!-- <p class="content vision-content">
+          In the intricate and rapidly evolving Web3 sphere, our mission is to guide brands with expertise and precision. We approach each endeavor with a deep understanding of the digital landscape, leveraging cutting-edge strategies to ensure our clients' projects resonate in this transformative space, driving innovation and fostering growth.
+        </p>
+        <p class="content mission-content">
+          In the dynamic realm of Web3, where innovations emerge at an unprecedented pace, our commitment is to adapt swiftly. We harness our expertise to navigate the ever-evolving landscape and offer tailor-made counsel to our clients. By remaining agile and vigilant, we seize emerging opportunities and mitigate potential risks.</p>
+        <div class="about-buttons">
+          <button class="arrow" onclick="arrowclick()"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="vision" onclick=" visioncome()">Our Vision</button>
+          <button class="mission" onclick=" missioncome()">Our Mission</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div id="three-container"></div>
+
+
+
+  </div>
+
+  <!-- service section -->
+  <section class="service-section">
+
+    <!-- <div id="large-header" class="large-header">
+      <!-- <canvas id="demo-canvas"></canvas> -->
+      <div id="scene">
+        <div id="left-zone">
+          <ul class="list">
+            <li class="item">
+              <input type="radio"
+                id="radio_The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)"
+                name="basic_carousel"
+                value="The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)"
+                checked="checked" />
+              <label class="label_strawberry"
+                for="radio_The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)"><i
+                  class="bi bi-code-slash"></i>Web3 Consultation</label>
+              <div class="content content_strawberry">
+                <i class="bi bi-code-slash"></i>
+                <h1>Web3 Consultation</h1>
+                <p>Our team has a deep understanding of the web3 landscape and can help you identify and capitalize on
+                  new opportunities within web3. Whether you're just starting out or looking to expand your business
+                  into the web3 space, our team can help you create a roadmap for success.</p>
+              </div>
+            </li>
+            <li class="item">
+              <input type="radio"
+                id="radio_A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa."
+                name="basic_carousel"
+                value="A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa." />
+              <label class="label_banana"
+                for="radio_A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa."><i
+                  class="bi bi-bar-chart-fill"></i>Marketing</label>
+              <div class="content content_banana"><i class="bi bi-bar-chart-fill"></i>
+                <h1>Marketing</h1>
+                <p>Our team can help you develop a comprehensive marketing strategy that aligns with your business goals
+                  to promote across various platforms, including traditional social media and other web3-specific
+                  platforms.Our team can also help create engaging content that effectively communicates your message to
+                  your target audience.</p>
+              </div>
+            </li>
+            <li class="item">
+              <input type="radio"
+                id="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus."
+                name="basic_carousel"
+                value="The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus." />
+              <label class="label_apple"
+                for="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus."><i
+                  class="bi bi-palette"></i>Art Generation</label>
+              <div class="content content_apple"> <i class="bi bi-palette"></i>
+                <h1>Art Generation</h1>
+                <p>Web3 space offers a unique opportunity for artists and creatives to showcase their work and connect
+                  with their audience in new and exciting ways. That's why we offer a range of creative and art services
+                  designed to help you realize your vision and stand out in the web3 space.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input type="radio"
+                id="radio_The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae."
+                name="basic_carousel"
+                value="The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae." />
+              <label class="label_orange"
+                for="radio_The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae."><i
+                  class="bi bi-people-fill"></i>Community Management</label>
+              <div class="content content_orange"><i class="bi bi-people-fill"></i>
+                <h1>Community Management</h1>
+                <p>Our team has extensive experience in community building and has helped create some of the largest
+                  communities in the web3 space, spanning across various platforms such as Discord, Twitter Spaces, and
+                  more. Our team can help your project grow by building and maintaining an active web3 community,
+                  tailored to your specific vertical and business goals.</p>
+              </div>
+            </li>
+            <li class="item">
+              <input type="radio"
+                id="radio_The tech (specifically, the sweet tech) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae."
+                name="basic_carousel"
+                value="The tech (specifically, the sweet tech) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae." />
+              <label class="label_tech"
+                for="radio_The tech (specifically, the sweet tech) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae."><i
+                  class="bi bi-bug-fill"></i>Tech Development </label>
+              <div class="content content_tech"><i class="bi bi-bug-fill"></i>
+                <h1>Tech Development </h1>
+                <p>Whether you need to build a blockchain- based solution, develop a smart contract, or create a
+                  decentralized application, our team has the expertise and experience to deliver results. We use the
+                  latest tools and technologies to ensure your solution is secure, scalable, and efficient.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="middle-border"></div>
+        <div id="right-zone"></div>
+      </div>
+    </div> -->
+  </section>
+
+
+  <!-- <script src="three.r134.min.js"></script>
+  <script src="Js/vanta.waves.min.js"></script>
+  <script>
+    let HeroSection = document.querySelector(".Hero-section");
+  VANTA.WAVES({
+    el: HeroSection,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x151515
+  })
+  </script> -->
+  <script src="Js/client.js"></script>
+  <script src="Js/team.js"></script>
+  <script src="Js/about.js"></script>
+  <script src="Js/Home-to-Nav.js"></script>
+  <script src="Js/vision-mission.js"></script>
+  <!-- <script src="Js/head.js"></script> -->
+  <script type="module" src="Js/Galxy.js"></script>
+  <script>
+    document.getElementById('connect-button').addEventListener('click', event => {
+      let account;
+      let button = event.target;
+      ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+        account = accounts[0];
+        console.log(account);
+        button.textContent = account;
+
+        ethereum.request({method: 'eth_getBalance' , params: [account, 'latest']}).then(result => {
+          console.log(result);
+          let wei = parseInt(result,16);
+          let balance = wei / (10**18);
+          console.log(balance + " ETH");
+        });
+      });
+    });
+  </script> 
+</body>
+
+</html>
