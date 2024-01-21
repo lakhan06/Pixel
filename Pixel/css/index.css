@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +45,7 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  font-family: 'Press Start 2P', system-ui;
 }
 
 #connect-button{
@@ -80,6 +84,7 @@ body {
 }
 
 .veiw{
+  cursor: pointer;
   position: absolute;
   top: 50px;
   left: 50px;
@@ -87,10 +92,11 @@ body {
   align-items: center;
   opacity: 0;
   transition: all 3000ms ease;
-  z-index: 2;
+  /* z-index: 10; */
 }
 
 .veiw-all{
+  
   background-color: transparent;
   width: 40px;
   height: 40px;
@@ -101,7 +107,7 @@ body {
   align-items: center;
   z-index: 999;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
+ cursor: pointer;
 }
 
 .veiw-content{
