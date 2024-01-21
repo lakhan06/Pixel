@@ -1,0 +1,228 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+video {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .overlay{
+    
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    opacity: 0.4;
+    /* z-index: 1; */
+  }
+
+.nft-container{
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    z-index: 10;
+}
+
+.companyname{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid gray;
+    padding: 2px 0;
+    z-index: 10;
+}
+
+.companyname .image img{
+    width: 30px;
+    border-radius: 10px ;
+    
+}
+.company-name{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-align: center;
+    color: #EAECEF;
+    margin-left: 12px;
+    
+
+}
+
+.nft-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    
+    
+}
+.nft-card{
+    z-index: 10;
+    height: 250px;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-bottom: 20px;
+    
+}
+.nft-card .content{
+    background-color: rgb(26, 27, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 15px;
+    transform: translateY(40px);
+    transition: all 0.5s ease;
+    
+    
+}
+.nft-card:hover .content{
+    transform: translateY(0);
+}
+.card-name{
+font-size: 15px;
+}
+
+.content button{
+    width: 100%;
+    padding: 5px ;
+    background-color:rgb(252, 213, 53) ;
+    border-radius: 5px;
+    border: 2px solid rgb(252, 213, 53);
+    font-weight:600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.price-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    margin: 10px 0;
+    width: 100%;
+    gap: 70px;
+}
+.price-div .price{
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.price-div .tag{
+
+    color: gray;
+}
+.XRPRipple_QuantumLoop{
+    background:url(../images/Nft-images/XRPRipple_QuantumLoop.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Doge_Elon{
+    background:url(../images/Nft-images/dog-elon.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Ethereum{
+    background:url(../images/Nft-images/ethorium-card.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Polkadot_Magical{
+    background:url(../images/Nft-images/p-card.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Gold_king{
+    background:url(../images/Nft-images/Gold_king.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Bit_coin{
+    background:url(../images/Nft-images/Bit_coin.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Axies_Infinity{
+    background:url(../images/Nft-images/Axies_Infinity.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.haddi{
+    background:url(../images/Nft-images/haddi.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.captain{
+    background:url(../images/Nft-images/captain-america.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dead{
+    background:url(../images/Nft-images/deapool.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ape-marvel{
+    background:url(../images/Nft-images/ape-marvel.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Venom {
+    background:url(../images/Nft-images/venum.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.jOKAR {
+    background:url(../images/Nft-images/joker.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pikachu {
+    background:url(../images/Nft-images/pikachu.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Batmen {
+    background:url(../images/Nft/Batman.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.SpiderMan  {
+    background:url(../images/Nft-images/SpiderMan.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.iron_man  {
+    background:url(../images/Nft-images/Iron_man.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

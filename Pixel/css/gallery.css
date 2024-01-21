@@ -1,6 +1,5 @@
-.nft-gallery{
-    z-index: 10;
-}
+
+
 
  img {
     width: 100%;
@@ -389,6 +388,7 @@ input {
     border-right-color: #4a2b13;
     transform: rotateY(-90deg) translate3d(0, -17rem, -89rem);
     background: #110e12;
+    
     box-shadow: 0 5rem 2rem -2rem rgba(17, 14, 18, 0.5), inset 0 0 10rem #000;
     border-radius: 2rem;
     padding: 1rem;
@@ -455,14 +455,15 @@ input {
     width: 300rem;
     height: 250rem;
   }
+  
   wall4:before,
   wall4 door {
     width: 86rem;
     height: 224rem;
     border-radius: 1rem;
     box-shadow: 0 0 0 150rem #7f95a8;
-    left: -10rem;
-    right: -10rem;
+    left: -20rem;
+    right: -15rem;
     margin: auto;
     top: 60rem;
     transform: translate3d(0, 0, -1rem);

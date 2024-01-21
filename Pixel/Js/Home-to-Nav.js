@@ -29,7 +29,7 @@ let teamSection = document.querySelector(".team-section");
 let ContactSection = document.querySelector(".Contact");
 let aboutusSection = document.querySelector(".about-us");
 // let visionSection = document.querySelector(".canvas-wrapper");
-let ServiceSection = document.querySelector(".service-section");
+let ServiceSection = document.querySelector(".collections");
 
 let aboutlink = document.querySelector(".about-link");
 
@@ -596,6 +596,9 @@ function homeComeFromBar() {
 
   content.classList.remove("transform-down");
   content.style.setProperty("opacity", "1");
+
+  topbar.classList.remove("transform-down");
+ topbar.style.setProperty("opacity", "1");
   viewvision.style.setProperty("opacity", "0");
   viewabout.style.setProperty("opacity", "0");
   viewcontact.style.setProperty("opacity", "0");
