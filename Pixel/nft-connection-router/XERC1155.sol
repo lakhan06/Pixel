@@ -15,7 +15,6 @@ contract XERC1155 is ERC1155, IDapp {
   // address of the Gateway contract
   IGateway public gatewayContract;
 
-  // chain type + chain id => address of our contract in string format
   mapping(string => string) public ourContractOnChains;
 
   // transfer params struct where we specify which NFTs should be transferred to
