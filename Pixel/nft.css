@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.collectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.nftRow {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  /* border: solid 0.1px white; */
+  border-radius: 10px;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+  background: transparent;
+ 
+}
+.nftRow:hover {
+  transform: scale(1.01);
+  background-color: rgba(255, 255, 255, 0.169);
+}
+
+.count {
+  color: gold;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.nftTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nftImg,
+.nftImg img {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.nftButton {
+  background-color: rgb(189, 0, 0);
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.nftBtnActive:hover {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: rgba(255, 255, 255, 0.421) 2px 2px;
+}
+
+.btmBtn {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 50px;
+}
+
+.more {
+  padding: 10px 40px;
+  background-color: rgba(245, 245, 245, 0.462);
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.more:hover {
+  transition: 0.2s ease-in-out;
+  background-color: rgba(245, 245, 245, 0.618);
+}
+
+.greenbtn {
+  padding: 10px 40px;
+  background-color: rgba(0, 255, 34, 0.564);
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.greenbtn:hover {
+  transition: 0.2s ease-in-out;
+  background-color: rgba(0, 255, 34, 0.728);
+  box-shadow: rgba(255, 255, 255, 0.421) 2px 2px;
+}
